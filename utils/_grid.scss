@@ -1,0 +1,57 @@
+// NOTE: grid layouts
+
+@for $i from 1 through 12 {
+    .grid-cols-#{$i}{
+        grid-template-columns: repeat($i,minmax(0px,1fr));
+    }
+    .grid-rows-#{$i}{
+        grid-template-rows: repeat($i,minmax(0px,1fr));
+    }
+}
+.grid-cols-auto{
+    grid-template-columns:auto;
+}
+.grid-rows-auto{
+    grid-template-rows:auto;
+}
+
+// grid col span
+
+@for $i from 1 through 13 {
+    .col-span-#{$i}{
+        grid-column: span $i / span $i;
+    }
+
+    .row-span-#{$i}{
+        grid-row: span $i / span $i;
+    }
+}
+.col-span-auto{
+    grid-column: auto;
+}
+.col-span-full{
+    grid-column: 1 / -1;
+}
+.row-span-auto{
+    grid-row: auto;
+}
+.row-span-full{
+    grid-row: 1 / -1;
+}
+
+// NOTE: grid col/row start/ end
+
+@for $i from 1 through 13 {
+    .col-start-#{$i}{
+        grid-column-start: $i;
+    }
+    .col-end-#{$i}{
+        grid-column-end: $i;
+    }
+    .row-start-#{$i}{
+        grid-row-start: $i;
+    }
+    .row-end-#{$i}{
+        grid-row-end: $i;
+    }
+}

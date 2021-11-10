@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+@each $key,$val in $colors {
+    .text-#{$key}{
+        color : $val
+    }
+    .bg-#{$key}{
+        background-color:$val
+    }
+
+    .text-hover-#{$key}{
+        &:hover{
+            color: $val;
+        }
+    }
+
+    @if($val != white and $val != black){
+        @for $i from 1 through 9{
+            .text-#{$key}-#{100 * $i}{
+                color: mix( white,  $val,  $i * 10);
+            }
+            .bg-#{$key}-#{100 * $i}{
+                background-color: mix( white,  $val,  $i * 10);
+            }
+            .text-hover-#{$key}-#{100 * $i}{
+                &:hover{
+                    color: mix( white,  $val,  $i * 10);
+                }
+            }
+           
+        }
+    }
+   
+}
+

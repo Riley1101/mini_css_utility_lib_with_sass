@@ -1,0 +1,323 @@
+@use 'sass:math';
+@use 'variables' as *;
+
+    // NOTE: spacing utils
+    $utilities:(
+        "padding":(
+            "prefix":"p",
+            "values" : (
+                "0":0,
+                "1":$p-base * 1,
+                "2":$p-base * 2,
+                "3":$p-base * 3,
+                "4":$p-base * 4,
+                "5":$p-base * 5,
+                "6":$p-base * 6,
+                "7":$p-base * 7,
+                "8":$p-base * 8,
+                "9":$p-base * 9,
+                "10":$p-base * 10,
+                "auto":auto
+            ),
+        ),
+        "padding-left":(
+            "prefix":"pl",
+            "values" : (
+                "0":0,
+                "1":$p-base * 1,
+                "2":$p-base * 2,
+                "3":$p-base * 3,
+                "4":$p-base * 4,
+                "5":$p-base * 5,
+                "6":$p-base * 6,
+                "7":$p-base * 7,
+                "8":$p-base * 8,
+                "9":$p-base * 9,
+                "10":$p-base * 10,
+                "auto":auto
+            ),
+        ),
+        "padding-right":(
+            "prefix":"pr",
+            "values" : (
+                "0":0,
+                "1":$p-base * 1,
+                "2":$p-base * 2,
+                "3":$p-base * 3,
+                "4":$p-base * 4,
+                "5":$p-base * 5,
+                "6":$p-base * 6,
+                "7":$p-base * 7,
+                "8":$p-base * 8,
+                "9":$p-base * 9,
+                "10":$p-base * 10,
+                "auto":auto
+            ),
+        ),
+        "padding-top":(
+            "prefix":"pt",
+            "values" : (
+                "0":0,
+                "1":$p-base * 1,
+                "2":$p-base * 2,
+                "3":$p-base * 3,
+                "4":$p-base * 4,
+                "5":$p-base * 5,
+                "6":$p-base * 6,
+                "7":$p-base * 7,
+                "8":$p-base * 8,
+                "9":$p-base * 9,
+                "10":$p-base * 10,
+                "auto":auto
+            ),
+        ),
+        "padding-bottom":(
+            "prefix":"pb",
+            "values" : (
+                "0":0,
+                "1":$p-base * 1,
+                "2":$p-base * 2,
+                "3":$p-base * 3,
+                "4":$p-base * 4,
+                "5":$p-base * 5,
+                "6":$p-base * 6,
+                "7":$p-base * 7,
+                "8":$p-base * 8,
+                "9":$p-base * 9,
+                "10":$p-base * 10,
+                "auto":auto
+            ),
+        ),
+        "padding-inline":(
+            "prefix":"px",
+            "values" : (
+                "0":0,
+                "1":$p-base * 1,
+                "2":$p-base * 2,
+                "3":$p-base * 3,
+                "4":$p-base * 4,
+                "5":$p-base * 5,
+                "6":$p-base * 6,
+                "7":$p-base * 7,
+                "8":$p-base * 8,
+                "9":$p-base * 9,
+                "10":$p-base * 10,
+                "auto":auto
+            ),
+        ),
+        "padding-block":(
+            "prefix":"py",
+            "values" : (
+                "0":0,
+                "1":$p-base * 1,
+                "2":$p-base * 2,
+                "3":$p-base * 3,
+                "4":$p-base * 4,
+                "5":$p-base * 5,
+                "6":$p-base * 6,
+                "7":$p-base * 7,
+                "8":$p-base * 8,
+                "9":$p-base * 9,
+                "10":$p-base * 10,
+                "auto":auto
+            ),
+        ),
+        "margin":(
+            "prefix":"m",
+            "values" : (
+                "0":0,
+                "1":$p-base * 1,
+                "2":$p-base * 2,
+                "3":$p-base * 3,
+                "4":$p-base * 4,
+                "5":$p-base * 5,
+                "6":$p-base * 6,
+                "7":$p-base * 7,
+                "8":$p-base * 8,
+                "9":$p-base * 9,
+                "10":$p-base * 10,
+                "auto":auto
+            ),
+        ),
+        "margin-left":(
+            "prefix":"ml",
+            "values" : (
+                "0":0,
+                "1":$p-base * 1,
+                "2":$p-base * 2,
+                "3":$p-base * 3,
+                "4":$p-base * 4,
+                "5":$p-base * 5,
+                "6":$p-base * 6,
+                "7":$p-base * 7,
+                "8":$p-base * 8,
+                "9":$p-base * 9,
+                "10":$p-base * 10,
+                "auto":auto
+            ),
+        ),
+        "margin-right":(
+            "prefix":"mr",
+            "values" : (
+                "0":0,
+                "1":$p-base * 1,
+                "2":$p-base * 2,
+                "3":$p-base * 3,
+                "4":$p-base * 4,
+                "5":$p-base * 5,
+                "6":$p-base * 6,
+                "7":$p-base * 7,
+                "8":$p-base * 8,
+                "9":$p-base * 9,
+                "10":$p-base * 10,
+                "auto":auto
+            ),
+        ),
+        "margin-top":(
+            "prefix":"mt",
+            "values" : (
+                "0":0,
+                "1":$p-base * 1,
+                "2":$p-base * 2,
+                "3":$p-base * 3,
+                "4":$p-base * 4,
+                "5":$p-base * 5,
+                "6":$p-base * 6,
+                "7":$p-base * 7,
+                "8":$p-base * 8,
+                "9":$p-base * 9,
+                "10":$p-base * 10,
+                "auto":auto
+            ),
+        ),
+        "margin-bottom":(
+            "prefix":"mb",
+            "values" : (
+                "0":0,
+                "1":$p-base * 1,
+                "2":$p-base * 2,
+                "3":$p-base * 3,
+                "4":$p-base * 4,
+                "5":$p-base * 5,
+                "6":$p-base * 6,
+                "7":$p-base * 7,
+                "8":$p-base * 8,
+                "9":$p-base * 9,
+                "10":$p-base * 10,
+                "auto":auto
+            ),
+        ),
+        "margin-inline":(
+            "prefix":"mx",
+            "values" : (
+                "0":0,
+                "1":$p-base * 1,
+                "2":$p-base * 2,
+                "3":$p-base * 3,
+                "4":$p-base * 4,
+                "5":$p-base * 5,
+                "6":$p-base * 6,
+                "7":$p-base * 7,
+                "8":$p-base * 8,
+                "9":$p-base * 9,
+                "10":$p-base * 10,
+                "auto":auto
+
+            ),
+        ),
+        "margin-block":(
+            "prefix":"my",
+            "values" : (
+                "0":0,
+                "1":$p-base * 1,
+                "2":$p-base * 2,
+                "3":$p-base * 3,
+                "4":$p-base * 4,
+                "5":$p-base * 5,
+                "6":$p-base * 6,
+                "7":$p-base * 7,
+                "8":$p-base * 8,
+                "9":$p-base * 9,
+                "10":$p-base * 10,
+                "auto":auto
+            ),
+        ),
+    );
+
+
+@each $property,$map in $utilities {
+    $prefix : map-get($map: $map, $key: "prefix");
+    $values : map-get($map: $map, $key: "values");
+
+    @each $key,$value in $values {
+        @if($key == 'default'){
+            .#{$prefix}{
+                #{$property}:$value;
+            }
+        }@else{
+            .#{$prefix}-#{$key}{
+                #{$property}:$value;
+            }
+        }
+       
+    }
+}
+
+// display utils 
+
+@each $display in $displayProps {
+    .#{$display}{
+        display: #{$display};
+    }
+}
+
+// NOTE: dimensions utils
+
+@each $key,$dime in $dimensions {
+    .w-#{$key}{
+        width: $dime;
+    }
+
+    .h-#{$key}{
+        height: $dime;
+    }
+}
+
+// NOTE: gap
+
+@for $i from 0 through 10 {
+    .gap-#{$i}{
+       gap: $gap-base * $i 
+    }
+    .gap-x-#{$i}{
+        row-gap:  $gap-base * $i ;
+    }
+    .gap-y-#{$i}{
+        column-gap:  $gap-base * $i ;
+    }
+}
+
+// NOTE: alignments
+@each $align in $alignments {
+    
+    .justify-#{$align}{
+        justify-content:#{$align};
+    }
+    .justify-items-#{$align} {
+        justify-items: #{$align};
+    }
+    
+    .items-#{$align}{
+        align-items: #{$align};
+    }
+    .content-#{$align} {
+        align-content: #{$align};
+    }
+    .justify-self-#{$align}{
+        justify-self: $align;
+    }
+    .align-self-#{$align}{
+        align-self: $align;
+    }
+    
+}

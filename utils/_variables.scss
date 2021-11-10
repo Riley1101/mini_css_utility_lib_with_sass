@@ -1,0 +1,80 @@
+// NOTE: theme variables 
+
+$clr-primary: hsl(211, 100%, 50%);
+$clr-secondary:hsl(210, 8%, 46%);
+$clr-success: hsl(133, 62%, 41%);
+$clr-danger: hsl(354, 70%, 54%);
+$clr-warning:hsl(45, 99%, 51%);
+$clr-info: hsl(188, 78%, 40%);
+$clr-light : hsl(220, 27%, 98%);
+$clr-dark:hsl(213, 9%, 23%);
+$clr-white:hsl(0, 0%, 100%);
+
+$colors : (
+    "primary":$clr-primary,
+    "secondary":$clr-secondary,
+    "error":$clr-danger,
+    "warning":$clr-warning,
+    "info":$clr-info,
+    "light":$clr-light,
+    "dark":$clr-dark,
+    "white":$clr-white,
+
+    "black":hsl(0, 0%, 0%),
+    "red":hsl(0, 100%, 50%),
+    "blue":hsl(240, 100%, 50%),
+    "green":hsl(120, 100%, 25%),
+    "yellow":hsl(60, 100%, 50%),
+    "orange":hsl(39, 100%, 50%),
+    "purple":hsl(300, 100%, 25%),
+    "gray":hsl(0, 0%, 50%),
+);
+
+// NOTE: spacing
+
+$p-base:0.75rem;
+$m-base:0.75rem;
+$gap-base:0.75rem;
+
+
+// NOTE: border
+
+$border-base:1px;
+
+// NOTE: border radius 
+
+$radius-base : 20px;
+
+// NOTE: font sizes
+
+$text-base: 1rem;
+$text-sm : $text-base * 0.75;
+$text-lg : $text-base * 1.5;
+$text-xl : $text-base * 2;
+$text-2xl : $text-base * 4;
+
+
+// NOTE: display
+
+$displayProps: ("block", "inline-block", 
+"inline", "flex", "grid", "inline-flex", 
+"inline-grid", "table", "inline-table", "list-item", 
+"none", "contents");
+
+// NOTE: dimensions
+
+$dimensions :(
+    "full":100%,
+    "screen":100vh,
+    "min":min-content,
+    "max":max-content,
+    "20" : 20%,
+    "50" : 50%,
+    "80" :80%,
+    "auto":auto
+);
+
+// NOTE: aligments 
+$alignments: ("center", "space-between",
+ "space-around", "space-evenly",
+  "flex-start", "flex-end");
